@@ -1,2 +1,2 @@
-# LoadPredictorScaler
+# ScaleAheadOperator
 k8s operator
