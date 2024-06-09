@@ -1,0 +1,27 @@
+# permissions for end users to edit triggerscalings.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: scaleaheadoperator
+    app.kubernetes.io/managed-by: kustomize
+  name: triggerscaling-editor-role
+rules:
+- apiGroups:
+  - scaling.core.scaleahead.io
+  resources:
+  - triggerscalings
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - scaling.core.scaleahead.io
+  resources:
+  - triggerscalings/status
+  verbs:
+  - get

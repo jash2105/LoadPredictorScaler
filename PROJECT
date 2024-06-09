@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v4
 projectName: scaleaheadoperator
 repo: github.com/jash2105/ScaleAheadOperator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: core.scaleahead.io
+  group: scaling
+  kind: TriggerScaling
+  path: github.com/jash2105/ScaleAheadOperator/api/v1alpha1
+  version: v1alpha1
 version: "3"
